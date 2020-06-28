@@ -1,0 +1,24 @@
+.ant-table-row {
+    height: 55px;
+}
+.ant-table-header table {
+    visibility: visible !important;
+    table-layout: fixed;
+}
+
+.ant-table-cell {
+    width: 1.1%;
+}
+ .self-table-body {
+    height: 500px;
+    overflow-y: auto;
+ }
+
+ .tbody-prev {
+     height: 0px;
+     visibility: hidden;
+ }
+ .tbody-last {
+    height: 0px;
+    visibility: hidden;
+}
