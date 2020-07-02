@@ -1,43 +1,52 @@
 import React, { useState } from 'react';
-import { Input, Form } from 'antd';
-import { Select } from 'antd';
+import { Input, Form, Select } from 'antd';
 
 const { Option } = Select;
 
 interface ISelectLableProps {
-    title: string,
-    dataIndex?: string,
-    options: any[],
-    onChange: any
+  title: string,
+  dataIndex?: string,
+  options: any[],
+  onChange: any
 }
 
 const SelectLabel = (props: ISelectLableProps) => {
-    const { title, onChange, options } = props;
-    const select = () => {
-        return <Select style={{ width: 120 }} onChange={onChange}>
-                {
-                    options && options.map((item: any, index: number) => {
-                    return <Option value={item.title} key = {index}>{item.title}</Option>
-                    })
-                }
-            </Select>
-    } 
-    if (title) {
-        return <div>
-          {
-            title && <span>{title}</span>
-          }
-        { select() }
-      </div>
+  const { title, onChange, options } = props;
+  const select = () => (
+    <Select
+      onChange={onChange}
+      style={{ width: 120 }}
+    >
+      {
+        options && options.map((item: any, index: number) => (
+          <Option
+            key={index}
+            value={item.title}
+          >
+            {item.title}
+          </Option>
+        ))
       }
-      return (
-        <Form.Item style={{ margin: 0}}
-          name={props.dataIndex || ''}>
-            { select() }
-        </Form.Item>
-      );
-   
-}
+    </Select>
+  );
+  if (title) {
+    return (
+      <div>
+        {
+          title && <span>{title}</span>
+        }
+        {select()}
+      </div>
+    );
+  }
+  return (
+    <Form.Item
+      name={props.dataIndex || ''}
+      style={{ margin: 0 }}
+    >
+      {select()}
+    </Form.Item>
+  );
+};
 
 export default SelectLabel;
-

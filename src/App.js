@@ -5,11 +5,11 @@ import TemperatureRegister from './projects/temperatureRegister';
 
 function App() {
   return (
-      <div className="App">
-        <TemperatureRegister />
-        <div id = 'app-dialog'></div>
-      </div>
-    
+    <div className="App">
+      <TemperatureRegister />
+      <div id="app-dialog" />
+    </div>
+
   );
 }
 

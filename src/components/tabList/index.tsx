@@ -23,20 +23,23 @@ const TabList = (props: ITabListProps) => {
       if (index == data) {
         selectItem = item;
       }
-    })
+    });
     onChange && onChange(selectItem);
-  }
+  };
 
-  return <Tabs onTabClick={tabistChanged} >
-  {
-    list && list.map((item, index) => {
-    return <TabPane tab={item.tabName} key={index} forceRender={true}>
-    </TabPane>
-    })
-  }
-  </Tabs>
-}
-  
-
+  return (
+    <Tabs onTabClick={tabistChanged}>
+      {
+        list && list.map((item, index) => (
+          <TabPane
+            forceRender
+            key={index}
+            tab={item.tabName}
+          />
+        ))
+      }
+    </Tabs>
+  );
+};
 
 export default TabList;

@@ -12,9 +12,9 @@ const TableList = (props: ITableListProps) => {
   return (
     <div>
       <Table
-        className= {' self-table' }
-        pagination = {false}
-        scroll = {{ y: '500px' }}
+        className=" self-table"
+        pagination={false}
+        scroll={{ y: '500px' }}
         {...props}
       />
     </div>

@@ -8,19 +8,23 @@ interface IInputLabelProps {
 }
 
 export const InputLabel = (props: IInputLabelProps) => {
-  const { title, onChange} = props;
+  const { title, onChange } = props;
   if (title) {
-    return <div>
-      {
-        title && <span>{title}</span>
-      }
-    <Input {...props}/>
-  </div>
+    return (
+      <div>
+        {
+          title && <span>{title}</span>
+        }
+        <Input {...props} />
+      </div>
+    );
   }
   return (
-    <Form.Item style={{ margin: 0}}
-      name={props.dataIndex || ''}>
-      <Input {...props}/>
+    <Form.Item
+      style={{ margin: 0 }}
+      name={props.dataIndex || ''}
+    >
+      <Input {...props} />
     </Form.Item>
   );
 };
