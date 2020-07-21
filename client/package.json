@@ -1,0 +1,90 @@
+{
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
+  "plugins": [
+    [
+      "@babel/plugin-proposal-decorators",
+      {
+        "legacy": true
+      }
+    ],
+    [
+      "@babel/plugin-proposal-class-properties",
+      {
+        "loose": true
+      }
+    ]
+  ],
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "@types/react": "^16.9.38",
+    "@types/react-dom": "^16.9.8",
+    "antd": "^4.3.4",
+    "axios": "^0.19.2",
+    "jest-cli": "^26.1.0",
+    "jest-environment-jsdom": "^26.1.0",
+    "lodash": "^4.17.15",
+    "react": "^16.13.1",
+    "react-axios": "^2.0.3",
+    "react-dom": "^16.13.1",
+    "react-redux": "^7.2.0",
+    "react-scripts": "3.4.1",
+    "react-window": "^1.8.5",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0",
+    "rx": "^4.1.0",
+    "typescript": "^3.9.5"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test1": "react-scripts test",
+    "test": "jest --notify --watchman=false",
+    "eject": "react-scripts eject",
+    "lint": "eslint --ext .js --ext .tsx src",
+    "lint-fix": "eslint --fix --ext .js --ext .tsx src"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-decorators": "^7.10.1",
+    "@types/classnames": "^2.2.10",
+    "@types/lodash": "^4.14.155",
+    "@types/react-redux": "^7.1.9",
+    "@types/react-window": "^1.8.2",
+    "@types/rx": "^4.1.2",
+    "@typescript-eslint/eslint-plugin": "^3.5.0",
+    "@typescript-eslint/parser": "^3.5.0",
+    "babel-eslint": "^10.1.0",
+    "babel-plugin-transform-decorators-legacy": "^1.3.5",
+    "babel-preset-env": "^1.7.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "enzyme-to-json": "^3.5.0",
+    "eslint": "^6.6.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.3",
+    "eslint-plugin-react-hooks": "^4.0.5",
+    "prettier": "^2.0.5"
+  }
+}
